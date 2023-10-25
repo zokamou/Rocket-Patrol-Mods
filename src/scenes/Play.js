@@ -154,7 +154,7 @@ class Play extends Phaser.Scene{
         this.hard.anims.play('saucer')
 
         //reset fired
-        fired = false;
+        fired = false
     }
 
     update() {
