@@ -95,10 +95,10 @@ class Play extends Phaser.Scene{
             },
             fixedWidth: 80
         }
-        this.text = "FIRE"
-        this.fire = this.add.text(game.config.width - borderUISize*6 - borderPadding*2, borderUISize + borderPadding*3,"", fireConfig);
-        this.fire.text - (""+this.text);
-        this.fire.visible = true;
+        //this.text = "FIRE"
+        this.fire = this.add.text(game.config.width - borderUISize*6 - borderPadding*2, borderUISize + borderPadding*3,"FIRE", fireConfig);
+        //this.fire.text = (this.text);
+        //this.fire.visible = true;
 
         // high score
         let highConfig = {
