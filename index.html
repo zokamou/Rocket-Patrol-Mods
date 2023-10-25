@@ -6,12 +6,16 @@
     <link href='https://fonts.googleapis.com/css?family=DotGothic16' rel='stylesheet'>
     <title>Rocket Patrol</title>
     <style>
+        .fontPreload{    position:absolute;    left:-100px;}
         body{
             background-color: beige;
         }
     </style>
+    <div class="fontPreload" style="font-family: DotGothic16;">.</div>
 </head>
 <body>
+    <div style= "font-family: DotGothic16; visibility: hidden">
+    </div>
     <script src = "./lib/phaser.js"></script>
     <script src = "./src/prefabs/Rocket.js"></script>
     <script src = "./src/prefabs/Spaceship.js"></script>
