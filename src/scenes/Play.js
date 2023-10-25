@@ -141,6 +141,8 @@ class Play extends Phaser.Scene{
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {
             this.add.text(game.config.width/2, game.config.height/2, 'GAME OVER', scoreConfig).setOrigin(0.5);
             this.add.text(game.config.width/2, game.config.height/2 + 64, 'Press (R) to Restart or <- for Menu', scoreConfig).setOrigin(0.5);
+            fired = false;
+            this.fire.visible = false
             this.gameOver = true;
             
         }, null, this);
@@ -150,6 +152,9 @@ class Play extends Phaser.Scene{
         this.ship02.anims.play('spinning')
         this.ship03.anims.play('spinning')
         this.hard.anims.play('saucer')
+
+        //reset fired
+        fired = false;
     }
 
     update() {
