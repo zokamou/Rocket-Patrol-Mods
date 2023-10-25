@@ -150,12 +150,17 @@ class Play extends Phaser.Scene{
         this.ship03.anims.play('spinning')
         this.hard.anims.play('saucer')
 
+
     }
 
     update() {
 
+        //dumb font thing
+        this.highScore.setText("");
+        this.scoreLeft.setText("");
         this.highScore.setText("High-Score: " + hs);
         this.scoreLeft.setText("Score: " + this.p1Score);
+        
         //set high score
         if(hs <= this.p1Score){
             this.highScore.text = ("High-Score: " + hs)
