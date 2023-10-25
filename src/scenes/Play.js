@@ -183,6 +183,7 @@ class Play extends Phaser.Scene{
         // check key input for restart
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)) {
             this.fire.visible = false;
+            fired = false;
             this.scene.restart();
         }
 
