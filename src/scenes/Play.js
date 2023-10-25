@@ -113,7 +113,7 @@ class Play extends Phaser.Scene{
         }
         
         this.highScore = this.add.text((borderUISize*2 + borderPadding)*2 + 100, borderUISize + borderPadding*3, ("High-Score: " + hs), highConfig);
-        this.highScore.text =  ("High-Score: " + hs)
+        this.highScore.setText("High-Score: " + hs);
 
         // animation config
         this.anims.create({
@@ -149,10 +149,13 @@ class Play extends Phaser.Scene{
         this.ship02.anims.play('spinning')
         this.ship03.anims.play('spinning')
         this.hard.anims.play('saucer')
+
     }
 
     update() {
 
+        this.highScore.setText("High-Score: " + hs);
+        this.scoreLeft.setText("Score: " + this.p1Score);
         //set high score
         if(hs <= this.p1Score){
             this.highScore.text = ("High-Score: " + hs)
