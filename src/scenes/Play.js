@@ -97,8 +97,8 @@ class Play extends Phaser.Scene{
         }
         this.text = "FIRE"
         this.fire = this.add.text(game.config.width - borderUISize*6 - borderPadding*2, borderUISize + borderPadding*3,"", fireConfig);
-        this.fire.text = (this.text);
-        //this.fire.visible = true;
+        this.fire.text - (""+this.text);
+        this.fire.visible = true;
 
         // high score
         let highConfig = {
@@ -154,6 +154,7 @@ class Play extends Phaser.Scene{
     }
 
     update() {
+        
         
         //set high score
         if(hs <= this.p1Score){
